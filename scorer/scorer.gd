@@ -75,6 +75,7 @@ func check_game_over() -> void:
 
 func on_tile_selected(tile: MemoryTile) -> void:
 	SoundManager.play_tile_click(sound)
+	tile._can_select_me = false
 	check_pair_made(tile)
 
 
